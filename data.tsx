@@ -1,30 +1,20 @@
-import { BookText, CodeSquare, HomeIcon, UserRound, Globe, Play, Rss, Radio, BriefcaseBusiness, Crop, Pencil, Computer, Book, Rocket, Speech } from "lucide-react";
+import { BookText, CodeSquare, GitBranchIcon, HomeIcon, UserRound, MessageCircle, BriefcaseBusiness, Crop, Pencil, Computer, Book, Rocket, Speech } from "lucide-react";
 
 export const socialNetworks = [
     {
         id: 1,
-        logo: <Play size={30} strokeWidth={1} />,
-        src: "#!",
+        logo: <GitBranchIcon size={30} strokeWidth={1} />,
+        src: "http://github.com/codedevcoder",
     },
     {
         id: 2,
         logo: <BriefcaseBusiness size={30} strokeWidth={1} />,
-        src: "#!",
+        src: "http://linkedin.com",
     },
     {
         id: 3,
-        logo: <Globe size={30} strokeWidth={1} />,
-        src: "#!",
-    },
-    {
-        id: 4,
-        logo: <Rss size={30} strokeWidth={1} />,
-        src: "#!",
-    },
-    {
-        id: 5,
-        logo: <Radio size={30} strokeWidth={1} />,
-        src: "#!",
+        logo: <MessageCircle size={30} strokeWidth={1} />,
+        src: "http://web.whatsapp.com",
     },
 ];
 
