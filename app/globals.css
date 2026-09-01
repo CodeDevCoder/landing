@@ -1,14 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --bg-secondary: #6F2DBD;
+  --bg-secondary: #6f2dbd;
   --bg-dark: #131424;
-  --gradient-cover: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  --gradient-cover: linear-gradient(
+    90.21deg,
+    rgba(170, 54, 124, 0.5) -5.91%,
+    rgba(74, 47, 189, 0.5) 111.58%
+  );
 }
 
-html, body {
+html,
+body {
   color: #fff;
-  background-color: #1f1934;
+  background-color: #030301;
 }
 
 main {
