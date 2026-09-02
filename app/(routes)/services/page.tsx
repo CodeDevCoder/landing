@@ -17,12 +17,10 @@ const PageServices = () => {
             Mis{" "}
             <span className="text-(--bg-secondary) font-bold">Servicios.</span>
           </h1>
-          <p className="mb-3 text-xl text-gray-300">
-            Transformo ideas en experiencias Web de alto impacto. Me especializo
-            en el Desarrollo Front-End creando interfaces intuitivas, rápidas, y
-            totalmente responsivas. Combino diseño moderno con código limpio
-            para construir la identidad digital que tu negocio necesita para
-            destacar.
+          <p className="mb-8 text-xl text-gray-300">
+            Enfoco mis habilidades en construir la capa visual e interactiva de la web. Me especializo en traducir ideas complejas
+            en interfaces limpias, rápidas y accesibles, utilizando tecnologias modernas. Mi meta es asegurar que cada línea de código
+            contribuya a una experiencia de usuario impecable.
           </p>
           <button className="px-3 py-2 rounded-lg bg-(--bg-secondary) hover:bg-[#481D7A] cursor-pointer font-semibold">
             Contacta conmigo
