@@ -32,3 +32,9 @@ main {
 nav > div > div:hover {
   background-color: var(--bg-secondary);
 }
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+.swiper-pagination-bullet {
+  background-color: var(--bg-secondary); 
+}

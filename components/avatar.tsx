@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import { MotionTransition } from "./transition_component";
 
@@ -9,8 +11,8 @@ export const Avatar = () => {
     >
       <Image
         src="/avatar-1.png"
-        width={400}
-        height={400}
+        width={350}
+        height={350}
         className="w-full h-full"
         alt="Avatar"
         loading="eager"

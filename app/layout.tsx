@@ -4,6 +4,10 @@ import "./globals.css";
 import { NavBar } from "@/components/navbar";
 import { Header } from "@/components/header";
 
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
 const urbanist = Urbanist({
   subsets: ["latin"],
 });
