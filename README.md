@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portafolio personal y landing page
 
-## Getting Started
+Portafolio web personal e interactivo, construido desde cero con herramientas modernas del ecosistema front-end. Además de presentar mis habilidades como desarrollador, este proyecto representa un hito de **autoaprendizaje, disciplina y dominio técnico autónomo**.
 
-First, run the development server:
+## Stack tecnológico
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+| Área                 | Tecnología                           | Uso principal                                |
+| -------------------- | ------------------------------------ | -------------------------------------------- |
+| Framework            | Next.js 16.3.3                       | App Router y renderizado de la aplicación    |
+| Lenguaje             | TypeScript                           | Código tipado y mantenible                   |
+| Estilos              | Tailwind CSS 4                       | Diseño responsivo y modular                  |
+| Interacción          | Swiper.js                            | Carrusel de servicios                        |
+| Animación            | Framer Motion y React Type Animation | Transiciones y texto animado                 |
+| Contadores           | React CountUp                        | Estadísticas animadas                        |
+| Partículas           | tsParticles                          | Fondo interactivo                            |
+| Runtime              | Bun                                  | Instalación de dependencias y servidor local |
+| Control de versiones | Git y LazyGit                        | Gestión de ramas y commits                   |
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+El proyecto fue desarrollado con **LazyVim (Neovim)**, configurado para trabajar directamente desde la terminal y mantener un entorno ligero.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Aprendizajes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Mi camino en la programación comenzó de forma autodidacta. Durante el desarrollo de este proyecto aprendí a:
 
-## Learn More
+1. **Pensar en componentes:** separar la lógica visual de los datos, centralizados en `data.tsx`.
+2. **Dominar el layout:** construir interfaces con `Grid` y `Flexbox` que se adaptan desde móviles hasta monitores de escritorio.
+3. **Escribir código tipado:** utilizar interfaces estrictas de TypeScript para detectar errores antes de compilar.
 
-To learn more about Next.js, take a look at the following resources:
+## Soluciones a problemas frecuentes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Rutas 404 y error «Expression Expected» en Next.js
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Problema:** el enrutamiento fallaba al crear las primeras páginas.
+- **Causa:** se usaban exportaciones nombradas, como `export const Page`, y extensiones `.ts`.
+- **Solución:** en el App Router, cada ruta debe incluir un archivo `page.tsx` con una exportación por defecto (`export default`). Los componentes reutilizables, como `Header`, sí pueden usar exportaciones nombradas.
 
-## Deploy on Vercel
+### Error `void` al renderizar con `.map()`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Problema:** TypeScript mostraba _«Type 'void' is not assignable to type 'ReactNode'»_.
+- **Causa:** las funciones flecha con llaves (`=> { ... }`) no tenían un `return` explícito.
+- **Solución:** utilizar retorno implícito con paréntesis (`=> ( ... )`) o añadir `return` dentro del bloque.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Caché después de renombrar rutas
+
+- **Problema:** la navegación y algunas imágenes dejaron de cargar después de renombrar carpetas.
+- **Causa:** el compilador de Next.js conservaba referencias a las rutas anteriores en su caché.
+- **Solución:** eliminar la carpeta `.next` y reiniciar el servidor:
+
+  ```bash
+  rm -rf .next
+  bun run dev
+  ```
+
+## Ejecución local
+
+### Requisitos
+
+- [Bun](https://bun.sh/)
+- Git
+
+### Instalación
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/tu-usuario/landing-particles.git
+   cd landing-particles
+   ```
+
+2. Instala las dependencias:
+
+   ```bash
+   bun install
+   ```
+
+3. Inicia el servidor de desarrollo:
+
+   ```bash
+   bun run dev
+   ```
+
+4. Abre [http://localhost:3000](http://localhost:3000) en el navegador.
+
+## Scripts disponibles
+
+| Comando         | Descripción                        |
+| --------------- | ---------------------------------- |
+| `bun run dev`   | Inicia el servidor de desarrollo   |
+| `bun run build` | Genera la versión de producción    |
+| `bun run start` | Inicia la aplicación en producción |
+| `bun run lint`  | Ejecuta ESLint                     |
+
+Este README documenta un proceso de desarrollo real y transparente, desde el aprendizaje inicial hasta la resolución de problemas de arquitectura y herramientas.
