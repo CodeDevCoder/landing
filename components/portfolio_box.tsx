@@ -17,16 +17,16 @@ export const PortfolioBox = (props: PortfolioBoxProps) => {
   const { title, image, urlGithub, urlDemo, showDemo } = data;
 
   return (
-    <div className="p-4 border border-[#481D7A] rounded-xl backdrop-blur-sm">
-      <h3 className="mb-4 text-xl">{title}</h3>
+    <div className="min-w-0 p-4 border border-[#481D7A] rounded-xl backdrop-blur-sm">
+      <h3 className="mb-4 text-xl break-words">{title}</h3>
       <Image
         src={image}
         alt="Proyecto 1"
         width={400}
         height={400}
-        className="w-full md:w-50 rounded-2xl h-auto"
+        className="w-full h-auto rounded-2xl md:w-50"
       />
-      <div className="flex gap-5 mt-5">
+      <div className="flex flex-wrap gap-3 mt-5 sm:gap-5">
         <Link
           href={urlGithub}
           target="_blank"
@@ -34,7 +34,7 @@ export const PortfolioBox = (props: PortfolioBoxProps) => {
         >
           GitHub
         </Link>
-        
+
         {showDemo !== false && (
           <Link
             href={urlDemo}

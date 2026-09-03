@@ -12,7 +12,7 @@ const PageAboutMe = () => {
       {/* <CoverParticles /> */}
       <ContainerPage>
         <Avatar />
-        <h1 className="text-2xl leading-tight text-center md:text-left md:text-5xl md:mt-2">
+        <h1 className="max-w-4xl mt-8 text-2xl leading-tight text-center break-words sm:text-3xl md:text-left md:text-5xl md:mt-2">
           Toda mi{" "}
           <span className="text-(--bg-secondary) font-bold">
             Trayectoria Profesional
