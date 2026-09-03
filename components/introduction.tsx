@@ -36,20 +36,20 @@ export const Introduction = () => {
             />
           </h1>
           <p className="mx-auto mb-2 text-xl md:mx-0 md:mb-8">
-            Desaarrollador Front-End apasionado por el código limpio, enfocado
-            en transformar diseños en experiencias digitales de alto impacto,
-            accesibles, fluidas y 100% funcionales para todos.
+            Desaarrollador Front-End apasionado por tranformar ideas en código limpio y
+            experiencias interactivas. Enfocado en el auto aprendizaje constante y en dominar
+            herramientas modernas para construir interfaces eficientes.
           </p>
           <div className="flex items-center justify-center gap-3 md:justify-start md:gap-10">
             <Link
-              href="/projects"
+              href="/portfolio"
               className="px-3 py-2 transition-all border-2 cursor-pointer text-md w-fit rounded-xl hover:shadow-xl hover:shadow-white/50"
             >
               Ver proyectos
             </Link>
 
             <Link
-              href="/contact"
+              href="/contact_me"
               className="px-3 py-2 transition-all border-2 cursor-pointer text-md text-(--bg-secondary) border-(--bg-secondary) w-fit rounded-xl hover:shadow-xl hover:shadow-[#6F2BDB]"
             >
               Contacta conmigo

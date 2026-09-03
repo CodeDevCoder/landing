@@ -1,5 +1,5 @@
 import { AvatarServices } from "@/components/avatar_services";
-import { CoverParticles } from "@/components/CoverParticles";
+// import { CoverParticles } from "@/components/CoverParticles";
 import { RoundedImage } from "@/components/rounded_image";
 import { SliderServices } from "@/components/slider_services";
 import { TransitionPage } from "@/components/transition_page";
@@ -8,7 +8,7 @@ const PageServices = () => {
   return (
     <>
       <TransitionPage />
-      <CoverParticles />
+      {/* <CoverParticles /> */}
       <RoundedImage />
       <AvatarServices />
       <div className="grid items-center justify-center h-screen max-w-5xl gap-6 mx-auto md:grid-cols-2 px-20">
