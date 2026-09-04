@@ -4,7 +4,6 @@ import {
   GitBranchIcon,
   HomeIcon,
   UserRound,
-  MessageCircle,
   BriefcaseBusiness,
   Crop,
   Pencil,
@@ -22,11 +21,6 @@ export const socialNetworks = [
     id: 2,
     logo: <BriefcaseBusiness size={30} strokeWidth={1} />,
     src: "http://linkedin.com",
-  },
-  {
-    id: 3,
-    logo: <MessageCircle size={30} strokeWidth={1} />,
-    src: "http://web.whatsapp.com",
   },
 ];
 
